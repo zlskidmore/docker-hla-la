@@ -84,7 +84,7 @@ RUN make all BOOST_PATH=/usr/include/boost BAMTOOLS_PATH=/usr/local/bin/bamtools
 
 # modify paths.ini for hla*la
 RUN sed -i 's@samtools_bin=@samtools_bin=/usr/local/bin/samtools@' paths.ini
-RUN sed -i 's@bwa_bin=@samtools_bin=/usr/local/bin/bwa@' paths.ini
+RUN sed -i 's@bwa_bin=@bwa_bin=/usr/local/bin/bwa@' paths.ini
 RUN sed -i 's@picard_sam2fastq_bin=.*@picard_sam2fastq_bin=/usr/local/bin/picard/SamToFastq.jar@' paths.ini
 
 # some final cleanup and command
